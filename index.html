@@ -2,8 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LumiVocab - TOEIC Master</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>LumiVocab</title>
+    
+    <!-- PWA / iOS Web App Meta Tags -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="LumiVocab">
+    <meta name="theme-color" content="#f8fafc">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       /* Custom scrollbar for a cleaner look */
@@ -21,6 +29,8 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         background-color: #f8fafc; /* Slate 50 */
+        /* Prevent bounce on iOS to feel more native */
+        overscroll-behavior-y: none;
       }
       /* Apple-like smooth input transition */
       .input-transition {
